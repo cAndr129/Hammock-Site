@@ -1,0 +1,255 @@
+
+#main-container{
+    font-family: "Roboto Light", serif;
+    width: 800px;
+    margin:auto;
+}
+
+
+
+.calender-container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#photo-container{
+    height: 400px;
+    margin:auto;
+
+}
+
+#photo-1{
+    width: 49.8%;
+    height: 80%;
+    padding-right: 0.2%;
+    float: left;
+    cursor: pointer;
+}
+
+#photo-2{
+    width: 50%;
+    height: 40%;
+    float: right;
+    cursor: pointer;
+}
+
+#photo-3{
+    width: 50%;
+    height: 39.8%;
+    padding-top: 0.2%;
+    float: right;
+    cursor: pointer;
+}
+
+#photo-prev-container{
+    float: bottom;
+    height:500px;
+}
+
+.photo-prev{
+    padding-top:2px;
+    padding-right: 2px;
+
+    width:10%;
+    float: left;
+    cursor: pointer;
+}
+
+.photo-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index:10;
+}
+
+.photo-modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.view-photos{
+    font-weight: bold;
+    float: right;
+}
+
+.description-container{
+    margin-top: -20px;
+
+}
+
+
+.top-description{
+    text-align:left;
+
+}
+
+.name{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+strong{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+small{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.description{
+    margin-top: -19px;
+
+}
+.description-detailed{
+    margin-top: -19px;
+    font-size: 15px;
+}
+
+
+.saveToList-button, .contact-button{
+    background-color: #008489;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+/* code for discarded calendar
+
+/*
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto Thin", sans-serif;
+    font-size:62.5%;
+}
+
+
+.calender-container{
+    width:60%;
+    height: 80vh;
+    background-color: #008489;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calender{
+    width:45rem;
+    height: 52rem;
+    background-color: black;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+}
+
+.month{
+    width: 100%;
+    height: 12rem;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.05rem rgba(0,0,0,0.5);
+}
+
+.month i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1{
+    font-size: 3rem;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing:0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month p{
+    font-size:1.6rem;
+}
+
+.weekdays{
+    width:100%;
+    height:5rem;
+    padding: 0 0.4rem;
+    display:flex;
+    align-items:center;
+}
+
+.weekdays div{
+    font-size: 1.5rem;
+    font-weight:400;
+    letter-spacing:0.1rem;
+    width: calc(44.2rem/7);
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    text-shadow: 0.3rem .5rem rgba(0,0,0, 0.5);
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div{
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width:calc(40.2rem/7);
+    height: 5rem;
+    display:flex;
+    justify-content:center;
+    text-shadow:0 0.3rem 0.5rem rgba(0,0,0,0.5);
+    transition: background-color0.2s;
+}
+
+.days div:hover:not(.today){
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor:pointer;
+}
+.prev-date,.next-dat{
+    opacity:0.5;
+}
+
+.today{
+    background-color: #167e56;
+}
+
+
